@@ -1,0 +1,21 @@
+<div class="profile-container">
+	<img class="profile picture" ng-src="{{profileDetails.profile_image_url}}">
+
+	<div class="profile screen-name-overlay">
+		{{ profileDetails.screen_name}}
+	</div>
+	<div class="profile background" style="background-color: #{{profileDetails.profile_background_color}};">
+		<img ng-src="{{profileDetails.profile_background_image_url}}";
+	</div>
+	<div class="profile details">
+		<h1>{{ profileDetails.screen_name }}</h1>
+		<p>{{ profileDetails.location }}</p>
+		<p>{{ profileDetails.status.created_at }}</p>
+	</div>
+	<div class="profile tweets">
+		<h1>Meest Recente tweet</h1>
+		<p>
+			{{ profileDetails.status.text }}
+		</p>
+	</div>
+</div>
